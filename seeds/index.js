@@ -1,24 +1,21 @@
 const seedUsers = require('./user-seeds');
-
-const seedPosts = require('./post-seeds')
+const seedPosts = require('./post-seeds');
 const seedComments = require('./comment-seeds');
-
 
 const sequelize = require('../config/connection');
 
 const seedAll = async () => {
-    await sequelize.sync({force: true});
-    console.log("DB Synced")
+    await sequelize.sync({ force: true });
+    console.log('\n----- DATABASE SYNCED -----\n');
     await seedUsers();
-    console.log("Users seeded");
+    console.log('\n----- USERS SEEDED -----\n');
     await seedPosts();
-    console.log("Posts seeded");
+    console.log('\n----- POSTS SEEDED -----\n');
     await seedComments();
-    console.log("Comments seeded")
-
-    // // this will exit the seeding processing, seeding means that we are adding the data in the database directly
+    console.log('\n----- COMMENTS SEEDED -----\n');
+  
+  
     process.exit(0);
-}
-
-// // call back for the main function that will start the process
-seedAll();
+  };
+  
+  seedAll();

@@ -1,13 +1,11 @@
 const {Model, DataTypes} = require('sequelize');
-
-const sequelize = require('../config/connection')
-
+const sequelize = require('../config/connection');
 
 class Comment extends Model {}
 
 Comment.init(
     {
-        // Columns will go here
+        //columns will go here
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
@@ -16,7 +14,8 @@ Comment.init(
         comment_text: {
             type: DataTypes.STRING,
             validate: {
-                len: [3] // length will be 4
+            // this means the comment_text must be at least three characters long
+            len: [3]
             }
         },
         user_id: {
@@ -37,11 +36,12 @@ Comment.init(
         }
     },
     {
-        sequelize, 
+        sequelize,
         freezeTableName: true,
         underscored: true,
         modelName: 'comment'
     }
 );
+
 
 module.exports = Comment;
