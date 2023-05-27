@@ -128,5 +128,13 @@ You are required to submit BOTH of the following for review:
 
 * The URL of the GitHub repository, with a unique name and a readme describing the project.
 
+
+
+
+# Live Link:
+https://week14-model-miew-control-mvc.herokuapp.com/
+
+# Git hub link:
+https://github.com/leig1974/week14-Challenge/tree/master
 ---
 © 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
